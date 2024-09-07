@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <title>2IoT</title>
+  </head>
+  <body>
+    <div class="container mt-6">
+      <!-- Formulário de Usuário -->
+      <fieldset>
+        <form id="form-1" class="form-cadastro">
+          <h2 class="mb-3">Cadastro de Usuário</h2>
+          <div class="form-row-cadastro">
+            <div class="form-group-cadastro col-md-5">
+              <label for="usuario" class="col-md-11 col-form-label">Nome de Usuário</label>
+              <input type="text" class="form-control campo-obrigatorio" id="nome-user" placeholder="Ex: User123" required />
+              <div class="invalid-feedback">Este campo é obrigatório.</div>
+            </div>
+            <div class="form-group-cadastro col-md-6">
+              <label for="nome" class="col-md-11 col-md-3 col-form-label">Nome</label>
+              <input type="text" class="form-control campo-obrigatorio" id="nome" placeholder="Nome e sobrenome" required/>
+              <div class="invalid-feedback">Este campo é obrigatório.</div>
+            </div>
+          </div>
+          <div class="form-row-cadastro">
+            <div class="form-group-cadastro col-md-4 mb-3">
+              <label for="senha" class="col-md-11 col-form-label">Senha</label>
+              <input type="password" class="form-control campo-obrigatorio" id="senha" placeholder="Minimo de 8 caracteres entre letra e número" required/>
+              <div class="invalid-feedback">Este campo é obrigatório.</div>
+            </div>
+            <div class="form-group-cadastro col-md-4 mb-3">
+              <label for="confirma-senha" class="col-md-11 col-form-label">Confirmar Senha</label>
+              <input type="password" class="form-control campo-obrigatorio" id="confirma-senha" required/>
+              <div class="invalid-feedback">Este campo é obrigatório.</div>
+            </div>
+          </div>
+          <div class="form-group-cadastro col-md-10 mb-4">
+            <label for="email" class="col-md-11 col-form-label">E-mail</label>
+            <input type="email" class="form-control campo-obrigatorio" id="email" placeholder="user@user.com" required/>
+            <div class="invalid-feedback">Este campo é obrigatório.</div>
+          </div>
+          <div class="form-group-cadastro col-md-10 mb-5">
+            <label for="confirma-email" class="col-md-11 col-form-label">Confirmar E-mail</label>
+            <input type="email" class="form-control campo-obrigatorio" id="confirma-email" required/>
+            <div class="invalid-feedback">Este campo é obrigatório.</div>
+          </div>
+          <div class="form-row-cadastro align-items-center">
+            <div class="form-group-cadastro">
+              <label for="ddi1"></label>
+              <select class="form-control ddi" id="ddi1" required>
+                <option value="" data-icon="" data-subtext="">DDI</option>
+                <option value="+93" data-icon="flag-icon-af">(+93) Afeganistão</option>
+                <option value="+355" data-icon="flag-icon-al">(+355) Albânia</option>
+                <option value="+213" data-icon="flag-icon-dz">(+213) Argélia</option>
+                <option value="+376" data-icon="flag-icon-ad">(+376) Andorra</option>
+                <option value="+244" data-icon="flag-icon-ao">(+244) Angola</option>
+                <option value="+1" data-icon="flag-icon-ag">(+1) Antígua e Barbuda</option>
+                <option value="+54" data-icon="flag-icon-ar">(+54) Argentina</option>
+                <option value="+374" data-icon="flag-icon-am">(+374) Armênia</option>
+                <option value="+297" data-icon="flag-icon-aw">(+297) Aruba</option>
+                <option value="+61" data-icon="flag-icon-au">(+61) Austrália</option>
+                <option value="+43" data-icon="flag-icon-at">(+43) Áustria</option>
+                <option value="+994" data-icon="flag-icon-az">(+994) Azerbaijão</option>
+                <option value="+1" data-icon="flag-icon-bs">(+1) Bahamas</option>
+                <option value="+973" data-icon="flag-icon-bh">(+973) Barein</option>
+                <option value="+880" data-icon="flag-icon-bd">(+880) Bangladesh</option>
+                <option value="+1" data-icon="flag-icon-bb">(+1) Barbados</option>
+                <option value="+375" data-icon="flag-icon-by">(+375) Bielorrússia</option>
+                <option value="+32" data-icon="flag-icon-be">(+32) Bélgica</option>
+                <option value="+501" data-icon="flag-icon-bz">(+501) Belize</option>
+                <option value="+229" data-icon="flag-icon-bj">(+229) Benin</option>
+                <option value="+975" data-icon="flag-icon-bt">(+975) Butão</option>
+                <option value="+591" data-icon="flag-icon-bo">(+591) Bolívia</option>
+                <option value="+387" data-icon="flag-icon-ba">(+387) Bósnia e Herzegovina</option>
+                <option value="+267" data-icon="flag-icon-bw">(+267) Botswana</option>
+                <option value="+55" data-icon="flag-icon-br">(+55) Brasil</option>
+                <option value="+673" data-icon="flag-icon-bn">(+673) Brunei</option>
+                <option value="+359" data-icon="flag-icon-bg">(+359) Bulgária</option>
+                <option value="+226" data-icon="flag-icon-bf">(+226) Burkina Faso</option>
+                <option value="+257" data-icon="flag-icon-bi">(+257) Burundi</option>
+                <option value="+855" data-icon="flag-icon-kh">(+855) Camboja</option>
+                <option value="+237" data-icon="flag-icon-cm">(+237) Camarões</option>
+                <option value="+1" data-icon="flag-icon-ca">(+1) Canadá</option>
+                <option value="+238" data-icon="flag-icon-cv">(+238) Cabo Verde</option>
+                <option value="+236" data-icon="flag-icon-cf">(+236) República Centro-Africana</option>
+                <option value="+235" data-icon="flag-icon-td">(+235) Chade</option>
+                <option value="+56" data-icon="flag-icon-cl">(+56) Chile</option>
+                <option value="+86" data-icon="flag-icon-cn">(+86) China</option>
+                <option value="+57" data-icon="flag-icon-co">(+57) Colômbia</option>
+                <option value="+269" data-icon="flag-icon-km">(+269) Comores</option>
+                <option value="+242" data-icon="flag-icon-cg">(+242) Congo</option>
+                <option value="+243" data-icon="flag-icon-cd">(+243) Congo, República Democrática do</option>
+                <option value="+506" data-icon="flag-icon-cr">(+506) Costa Rica</option>
+                <option value="+385" data-icon="flag-icon-hr">(+385) Croácia</option>
+                <option value="+53" data-icon="flag-icon-cu">(+53) Cuba</option>
+                <option value="+357" data-icon="flag-icon-cy">(+357) Chipre</option>
+                <option value="+420" data-icon="flag-icon-cz">(+420) República Checa</option>
+                <option value="+45" data-icon="flag-icon-dk">(+45) Dinamarca</option>
+                <option value="+253" data-icon="flag-icon-dj">(+253) Djibouti</option>
+                <option value="+1" data-icon="flag-icon-dm">(+1) Dominica</option>
+                <option value="+1" data-icon="flag-icon-do">(+1) República Dominicana</option>
+                <option value="+593" data-icon="flag-icon-ec">(+593) Equador</option>
+                <option value="+20" data-icon="flag-icon-eg">(+20) Egito</option>
+                <option value="+503" data-icon="flag-icon-sv">(+503) El Salvador</option>
+                <option value="+240" data-icon="flag-icon-gq">(+240) Guiné Equatorial</option>
+                <option value="+291" data-icon="flag-icon-er">(+291) Eritreia</option>
+                <option value="+372" data-icon="flag-icon-ee">(+372) Estônia</option>
+                <option value="+251" data-icon="flag-icon-et">(+251) Etiópia</option>
+                <option value="+679" data-icon="flag-icon-fj">(+679) Fiji</option>
+                <option value="+358" data-icon="flag-icon-fi">(+358) Finlândia</option>
+                <option value="+33" data-icon="flag-icon-fr">(+33) França</option>
+                <option value="+241" data-icon="flag-icon-ga">(+241) Gabão</option>
+                <option value="+220" data-icon="flag-icon-gm">(+220) Gâmbia</option>
+                <option value="+995" data-icon="flag-icon-ge">(+995) Geórgia</option>
+                <option value="+49" data-icon="flag-icon-de">(+49) Alemanha</option>
+                <option value="+233" data-icon="flag-icon-gh">(+233) Gana</option>
+                <option value="+30" data-icon="flag-icon-gr">(+30) Grécia</option>
+                <option value="+1" data-icon="flag-icon-gd">(+1) Granada</option>
+                <option value="+502" data-icon="flag-icon-gt">(+502) Guatemala</option>
+                <option value="+224" data-icon="flag-icon-gn">(+224) Guiné</option>
+                <option value="+245" data-icon="flag-icon-gw">(+245) Guiné-Bissau</option>
+                <option value="+592" data-icon="flag-icon-gy">(+592) Guiana</option>
+                <option value="+509" data-icon="flag-icon-ht">(+509) Haiti</option>
+                <option value="+504" data-icon="flag-icon-hn">(+504) Honduras</option>
+                <option value="+36" data-icon="flag-icon-hu">(+36) Hungria</option>
+                <option value="+354" data-icon="flag-icon-is">(+354) Islândia</option>
+                <option value="+91" data-icon="flag-icon-in">(+91) Índia</option>
+                <option value="+62" data-icon="flag-icon-id">(+62) Indonésia</option>
+                <option value="+98" data-icon="flag-icon-ir">(+98) Irã</option>
+                <option value="+964" data-icon="flag-icon-iq">(+964) Iraque</option>
+                <option value="+353" data-icon="flag-icon-ie">(+353) Irlanda</option>
+                <option value="+972" data-icon="flag-icon-il">(+972) Israel</option>
+                <option value="+39" data-icon="flag-icon-it">(+39) Itália</option>
+                <option value="+1" data-icon="flag-icon-jm">(+1) Jamaica</option>
+                <option value="+81" data-icon="flag-icon-jp">(+81) Japão</option>
+                <option value="+962" data-icon="flag-icon-jo">(+962) Jordânia</option>
+                <option value="+7" data-icon="flag-icon-kz">(+7) Cazaquistão</option>
+                <option value="+254" data-icon="flag-icon-ke">(+254) Quênia</option>
+                <option value="+686" data-icon="flag-icon-ki">(+686) Kiribati</option>
+                <option value="+383" data-icon="flag-icon-xk">(+383) Kosovo</option>
+                <option value="+965" data-icon="flag-icon-kw">(+965) Kuwait</option>
+                <option value="+996" data-icon="flag-icon-kg">(+996) Quirguistão</option>
+                <option value="+856" data-icon="flag-icon-la">(+856) Laos</option>
+                <option value="+371" data-icon="flag-icon-lv">(+371) Letônia</option>
+                <option value="+961" data-icon="flag-icon-lb">(+961) Líbano</option>
+                <option value="+266" data-icon="flag-icon-ls">(+266) Lesoto</option>
+                <option value="+231" data-icon="flag-icon-lr">(+231) Libéria</option>
+                <option value="+218" data-icon="flag-icon-ly">(+218) Líbia</option>
+                <option value="+423" data-icon="flag-icon-li">(+423) Liechtenstein</option>
+                <option value="+370" data-icon="flag-icon-lt">(+370) Lituânia</option>
+                <option value="+352" data-icon="flag-icon-lu">(+352) Luxemburgo</option>
+                <option value="+389" data-icon="flag-icon-mk">(+389) Macedônia</option>
+                <option value="+261" data-icon="flag-icon-mg">(+261) Madagascar</option>
+                <option value="+265" data-icon="flag-icon-mw">(+265) Malawi</option>
+                <option value="+60" data-icon="flag-icon-my">(+60) Malásia</option>
+                <option value="+960" data-icon="flag-icon-mv">(+960) Maldivas</option>
+                <option value="+223" data-icon="flag-icon-ml">(+223) Mali</option>
+                <option value="+356" data-icon="flag-icon-mt">(+356) Malta</option>
+                <option value="+692" data-icon="flag-icon-mh">(+692) Ilhas Marshall</option>
+                <option value="+222" data-icon="flag-icon-mr">(+222) Mauritânia</option>
+                <option value="+230" data-icon="flag-icon-mu">(+230) Maurício</option>
+                <option value="+52" data-icon="flag-icon-mx">(+52) México</option>
+                <option value="+691" data-icon="flag-icon-fm">(+691) Micronésia</option>
+                <option value="+373" data-icon="flag-icon-md">(+373) Moldávia</option>
+                <option value="+377" data-icon="flag-icon-mc">(+377) Monaco</option>
+                <option value="+976" data-icon="flag-icon-mn">(+976) Mongólia</option>
+                <option value="+382" data-icon="flag-icon-me">(+382) Montenegro</option>
+                <option value="+212" data-icon="flag-icon-ma">(+212) Marrocos</option>
+                <option value="+258" data-icon="flag-icon-mz">(+258) Moçambique</option>
+                <option value="+95" data-icon="flag-icon-mm">(+95) Myanmar</option>
+                <option value="+264" data-icon="flag-icon-na">(+264) Namíbia</option>
+                <option value="+674" data-icon="flag-icon-nr">(+674) Nauru</option>
+                <option value="+977" data-icon="flag-icon-np">(+977) Nepal</option>
+                <option value="+31" data-icon="flag-icon-nl">(+31) Holanda</option>
+                <option value="+64" data-icon="flag-icon-nz">(+64) Nova Zelândia</option>
+                <option value="+505" data-icon="flag-icon-ni">(+505) Nicarágua</option>
+                <option value="+227" data-icon="flag-icon-ne">(+227) Níger</option>
+                <option value="+234" data-icon="flag-icon-ng">(+234) Nigéria</option>
+                <option value="+47" data-icon="flag-icon-no">(+47) Noruega</option>
+                <option value="+968" data-icon="flag-icon-om">(+968) Omã</option>
+                <option value="+92" data-icon="flag-icon-pk">(+92) Paquistão</option>
+                <option value="+680" data-icon="flag-icon-pw">(+680) Palau</option>
+                <option value="+507" data-icon="flag-icon-pa">(+507) Panamá</option>
+                <option value="+675" data-icon="flag-icon-pg">(+675) Papua Nova Guiné</option>
+                <option value="+595" data-icon="flag-icon-py">(+595) Paraguai</option>
+                <option value="+51" data-icon="flag-icon-pe">(+51) Peru</option>
+                <option value="+63" data-icon="flag-icon-ph">(+63) Filipinas</option>
+                <option value="+48" data-icon="flag-icon-pl">(+48) Polônia</option>
+                <option value="+351" data-icon="flag-icon-pt">(+351) Portugal</option>
+                <option value="+974" data-icon="flag-icon-qa">(+974) Catar</option>
+                <option value="+40" data-icon="flag-icon-ro">(+40) Romênia</option>
+                <option value="+7" data-icon="flag-icon-ru">(+7) Rússia</option>
+                <option value="+250" data-icon="flag-icon-rw">(+250) Ruanda</option>
+                <option value="+1" data-icon="flag-icon-kn">(+1) São Cristóvão e Nevis</option>
+                <option value="+1" data-icon="flag-icon-lc">(+1) Santa Lúcia</option>
+                <option value="+1" data-icon="flag-icon-vc">(+1) São Vicente e Granadinas</option>
+                <option value="+685" data-icon="flag-icon-ws">(+685) Samoa</option>
+                <option value="+378" data-icon="flag-icon-sm">(+378) San Marino</option>
+                <option value="+239" data-icon="flag-icon-st">(+239) São Tomé e Príncipe</option>
+                <option value="+966" data-icon="flag-icon-sa">(+966) Arábia Saudita</option>
+                <option value="+221" data-icon="flag-icon-sn">(+221) Senegal</option>
+                <option value="+381" data-icon="flag-icon-rs">(+381) Sérvia</option>
+                <option value="+248" data-icon="flag-icon-sc">(+248) Seychelles</option>
+                <option value="+232" data-icon="flag-icon-sl">(+232) Serra Leoa</option>
+                <option value="+65" data-icon="flag-icon-sg">(+65) Cingapura</option>
+                <option value="+421" data-icon="flag-icon-sk">(+421) Eslováquia</option>
+                <option value="+386" data-icon="flag-icon-si">(+386) Eslovênia</option>
+                <option value="+677" data-icon="flag-icon-sb">(+677) Ilhas Salomão</option>
+                <option value="+252" data-icon="flag-icon-so">(+252) Somália</option>
+                <option value="+27" data-icon="flag-icon-za">(+27) África do Sul</option>
+                <option value="+82" data-icon="flag-icon-kr">(+82) Coreia do Sul</option>
+                <option value="+211" data-icon="flag-icon-ss">(+211) Sudão do Sul</option>
+                <option value="+34" data-icon="flag-icon-es">(+34) Espanha</option>
+                <option value="+94" data-icon="flag-icon-lk">(+94) Sri Lanka</option>
+                <option value="+249" data-icon="flag-icon-sd">(+249) Sudão</option>
+                <option value="+597" data-icon="flag-icon-sr">(+597) Suriname</option>
+                <option value="+268" data-icon="flag-icon-sz">(+268) Suazilândia</option>
+                <option value="+46" data-icon="flag-icon-se">(+46) Suécia</option>
+                <option value="+41" data-icon="flag-icon-ch">(+41) Suíça</option>
+                <option value="+963" data-icon="flag-icon-sy">(+963) Síria</option>
+                <option value="+886" data-icon="flag-icon-tw">(+886) Taiwan</option>
+                <option value="+992" data-icon="flag-icon-tj">(+992) Tajiquistão</option>
+                <option value="+255" data-icon="flag-icon-tz">(+255) Tanzânia</option>
+                <option value="+66" data-icon="flag-icon-th">(+66) Tailândia</option>
+                <option value="+228" data-icon="flag-icon-tg">(+228) Togo</option>
+                <option value="+676" data-icon="flag-icon-to">(+676) Tonga</option>
+                <option value="+1" data-icon="flag-icon-tt">(+1) Trinidad e Tobago</option>
+                <option value="+216" data-icon="flag-icon-tn">(+216) Tunísia</option>
+                <option value="+90" data-icon="flag-icon-tr">(+90) Turquia</option>
+                <option value="+993" data-icon="flag-icon-tm">(+993) Turcomenistão</option>
+                <option value="+688" data-icon="flag-icon-tv">(+688) Tuvalu</option>
+                <option value="+256" data-icon="flag-icon-ug">(+256) Uganda</option>
+                <option value="+380" data-icon="flag-icon-ua">(+380) Ucrânia</option>
+                <option value="+971" data-icon="flag-icon-ae">(+971) Emirados Árabes Unidos</option>
+                <option value="+44" data-icon="flag-icon-gb">(+44) Reino Unido</option>
+                <option value="+1" data-icon="flag-icon-us">(+1) Estados Unidos</option>
+                <option value="+598" data-icon="flag-icon-uy">(+598) Uruguai</option>
+                <option value="+998" data-icon="flag-icon-uz">(+998) Uzbequistão</option>
+                <option value="+678" data-icon="flag-icon-vu">(+678) Vanuatu</option>
+                <option value="+39" data-icon="flag-icon-va">(+39) Vaticano</option>
+                <option value="+58" data-icon="flag-icon-ve">(+58) Venezuela</option>
+                <option value="+84" data-icon="flag-icon-vn">(+84) Vietnã</option>
+                <option value="+967" data-icon="flag-icon-ye">(+967) Iêmen</option>
+                <option value="+260" data-icon="flag-icon-zm">(+260) Zâmbia</option>
+                <option value="+263" data-icon="flag-icon-zw">(+263) Zimbábue</option>
+              </select>
+            </div>
+            <div class="form-group-cadastro col-md-4 mb-5">
+              <label for="celular1" class="col-md-11 col-form-label">Celular</label>
+              <input type="tel" class="form-control celular campo-obrigatorio" id="celular1" required/>
+              <div class="invalid-feedback">Este campo é obrigatório.</div>
+            </div>
+          </div>
+          <div class="form-row-cadastro align-items-center">
+            <div class="form-group-cadastro">
+              <label for="ddi2" class="mb-1"></label>
+              <select class="form-control ddi" id="ddi2" required>
+                <option value="">DDI</option>
+                <option value="" data-icon="" data-subtext=""></option>
+                <option value="+93" data-icon="flag-icon-af">(+93) Afeganistão</option>
+                <option value="+355" data-icon="flag-icon-al">(+355) Albânia</option>
+                <option value="+213" data-icon="flag-icon-dz">(+213) Argélia</option>
+                <option value="+376" data-icon="flag-icon-ad">(+376) Andorra</option>
+                <option value="+244" data-icon="flag-icon-ao">(+244) Angola</option>
+                <option value="+1" data-icon="flag-icon-ag">(+1) Antígua e Barbuda</option>
+                <option value="+54" data-icon="flag-icon-ar">(+54) Argentina</option>
+                <option value="+374" data-icon="flag-icon-am">(+374) Armênia</option>
+                <option value="+297" data-icon="flag-icon-aw">(+297) Aruba</option>
+                <option value="+61" data-icon="flag-icon-au">(+61) Austrália</option>
+                <option value="+43" data-icon="flag-icon-at">(+43) Áustria</option>
+                <option value="+994" data-icon="flag-icon-az">(+994) Azerbaijão</option>
+                <option value="+1" data-icon="flag-icon-bs">(+1) Bahamas</option>
+                <option value="+973" data-icon="flag-icon-bh">(+973) Barein</option>
+                <option value="+880" data-icon="flag-icon-bd">(+880) Bangladesh</option>
+                <option value="+1" data-icon="flag-icon-bb">(+1) Barbados</option>
+                <option value="+375" data-icon="flag-icon-by">(+375) Bielorrússia</option>
+                <option value="+32" data-icon="flag-icon-be">(+32) Bélgica</option>
+                <option value="+501" data-icon="flag-icon-bz">(+501) Belize</option>
+                <option value="+229" data-icon="flag-icon-bj">(+229) Benin</option>
+                <option value="+975" data-icon="flag-icon-bt">(+975) Butão</option>
+                <option value="+591" data-icon="flag-icon-bo">(+591) Bolívia</option>
+                <option value="+387" data-icon="flag-icon-ba">(+387) Bósnia e Herzegovina</option>
+                <option value="+267" data-icon="flag-icon-bw">(+267) Botswana</option>
+                <option value="+55" data-icon="flag-icon-br">(+55) Brasil</option>
+                <option value="+673" data-icon="flag-icon-bn">(+673) Brunei</option>
+                <option value="+359" data-icon="flag-icon-bg">(+359) Bulgária</option>
+                <option value="+226" data-icon="flag-icon-bf">(+226) Burkina Faso</option>
+                <option value="+257" data-icon="flag-icon-bi">(+257) Burundi</option>
+                <option value="+855" data-icon="flag-icon-kh">(+855) Camboja</option>
+                <option value="+237" data-icon="flag-icon-cm">(+237) Camarões</option>
+                <option value="+1" data-icon="flag-icon-ca">(+1) Canadá</option>
+                <option value="+238" data-icon="flag-icon-cv">(+238) Cabo Verde</option>
+                <option value="+236" data-icon="flag-icon-cf">(+236) República Centro-Africana</option>
+                <option value="+235" data-icon="flag-icon-td">(+235) Chade</option>
+                <option value="+56" data-icon="flag-icon-cl">(+56) Chile</option>
+                <option value="+86" data-icon="flag-icon-cn">(+86) China</option>
+                <option value="+57" data-icon="flag-icon-co">(+57) Colômbia</option>
+                <option value="+269" data-icon="flag-icon-km">(+269) Comores</option>
+                <option value="+242" data-icon="flag-icon-cg">(+242) Congo</option>
+                <option value="+243" data-icon="flag-icon-cd">(+243) Congo, República Democrática do</option>
+                <option value="+506" data-icon="flag-icon-cr">(+506) Costa Rica</option>
+                <option value="+385" data-icon="flag-icon-hr">(+385) Croácia</option>
+                <option value="+53" data-icon="flag-icon-cu">(+53) Cuba</option>
+                <option value="+357" data-icon="flag-icon-cy">(+357) Chipre</option>
+                <option value="+420" data-icon="flag-icon-cz">(+420) República Checa</option>
+                <option value="+45" data-icon="flag-icon-dk">(+45) Dinamarca</option>
+                <option value="+253" data-icon="flag-icon-dj">(+253) Djibouti</option>
+                <option value="+1" data-icon="flag-icon-dm">(+1) Dominica</option>
+                <option value="+1" data-icon="flag-icon-do">(+1) República Dominicana</option>
+                <option value="+593" data-icon="flag-icon-ec">(+593) Equador</option>
+                <option value="+20" data-icon="flag-icon-eg">(+20) Egito</option>
+                <option value="+503" data-icon="flag-icon-sv">(+503) El Salvador</option>
+                <option value="+240" data-icon="flag-icon-gq">(+240) Guiné Equatorial</option>
+                <option value="+291" data-icon="flag-icon-er">(+291) Eritreia</option>
+                <option value="+372" data-icon="flag-icon-ee">(+372) Estônia</option>
+                <option value="+251" data-icon="flag-icon-et">(+251) Etiópia</option>
+                <option value="+679" data-icon="flag-icon-fj">(+679) Fiji</option>
+                <option value="+358" data-icon="flag-icon-fi">(+358) Finlândia</option>
+                <option value="+33" data-icon="flag-icon-fr">(+33) França</option>
+                <option value="+241" data-icon="flag-icon-ga">(+241) Gabão</option>
+                <option value="+220" data-icon="flag-icon-gm">(+220) Gâmbia</option>
+                <option value="+995" data-icon="flag-icon-ge">(+995) Geórgia</option>
+                <option value="+49" data-icon="flag-icon-de">(+49) Alemanha</option>
+                <option value="+233" data-icon="flag-icon-gh">(+233) Gana</option>
+                <option value="+30" data-icon="flag-icon-gr">(+30) Grécia</option>
+                <option value="+1" data-icon="flag-icon-gd">(+1) Granada</option>
+                <option value="+502" data-icon="flag-icon-gt">(+502) Guatemala</option>
+                <option value="+224" data-icon="flag-icon-gn">(+224) Guiné</option>
+                <option value="+245" data-icon="flag-icon-gw">(+245) Guiné-Bissau</option>
+                <option value="+592" data-icon="flag-icon-gy">(+592) Guiana</option>
+                <option value="+509" data-icon="flag-icon-ht">(+509) Haiti</option>
+                <option value="+504" data-icon="flag-icon-hn">(+504) Honduras</option>
+                <option value="+36" data-icon="flag-icon-hu">(+36) Hungria</option>
+                <option value="+354" data-icon="flag-icon-is">(+354) Islândia</option>
+                <option value="+91" data-icon="flag-icon-in">(+91) Índia</option>
+                <option value="+62" data-icon="flag-icon-id">(+62) Indonésia</option>
+                <option value="+98" data-icon="flag-icon-ir">(+98) Irã</option>
+                <option value="+964" data-icon="flag-icon-iq">(+964) Iraque</option>
+                <option value="+353" data-icon="flag-icon-ie">(+353) Irlanda</option>
+                <option value="+972" data-icon="flag-icon-il">(+972) Israel</option>
+                <option value="+39" data-icon="flag-icon-it">(+39) Itália</option>
+                <option value="+1" data-icon="flag-icon-jm">(+1) Jamaica</option>
+                <option value="+81" data-icon="flag-icon-jp">(+81) Japão</option>
+                <option value="+962" data-icon="flag-icon-jo">(+962) Jordânia</option>
+                <option value="+7" data-icon="flag-icon-kz">(+7) Cazaquistão</option>
+                <option value="+254" data-icon="flag-icon-ke">(+254) Quênia</option>
+                <option value="+686" data-icon="flag-icon-ki">(+686) Kiribati</option>
+                <option value="+383" data-icon="flag-icon-xk">(+383) Kosovo</option>
+                <option value="+965" data-icon="flag-icon-kw">(+965) Kuwait</option>
+                <option value="+996" data-icon="flag-icon-kg">(+996) Quirguistão</option>
+                <option value="+856" data-icon="flag-icon-la">(+856) Laos</option>
+                <option value="+371" data-icon="flag-icon-lv">(+371) Letônia</option>
+                <option value="+961" data-icon="flag-icon-lb">(+961) Líbano</option>
+                <option value="+266" data-icon="flag-icon-ls">(+266) Lesoto</option>
+                <option value="+231" data-icon="flag-icon-lr">(+231) Libéria</option>
+                <option value="+218" data-icon="flag-icon-ly">(+218) Líbia</option>
+                <option value="+423" data-icon="flag-icon-li">(+423) Liechtenstein</option>
+                <option value="+370" data-icon="flag-icon-lt">(+370) Lituânia</option>
+                <option value="+352" data-icon="flag-icon-lu">(+352) Luxemburgo</option>
+                <option value="+389" data-icon="flag-icon-mk">(+389) Macedônia</option>
+                <option value="+261" data-icon="flag-icon-mg">(+261) Madagascar</option>
+                <option value="+265" data-icon="flag-icon-mw">(+265) Malawi</option>
+                <option value="+60" data-icon="flag-icon-my">(+60) Malásia</option>
+                <option value="+960" data-icon="flag-icon-mv">(+960) Maldivas</option>
+                <option value="+223" data-icon="flag-icon-ml">(+223) Mali</option>
+                <option value="+356" data-icon="flag-icon-mt">(+356) Malta</option>
+                <option value="+692" data-icon="flag-icon-mh">(+692) Ilhas Marshall</option>
+                <option value="+222" data-icon="flag-icon-mr">(+222) Mauritânia</option>
+                <option value="+230" data-icon="flag-icon-mu">(+230) Maurício</option>
+                <option value="+52" data-icon="flag-icon-mx">(+52) México</option>
+                <option value="+691" data-icon="flag-icon-fm">(+691) Micronésia</option>
+                <option value="+373" data-icon="flag-icon-md">(+373) Moldávia</option>
+                <option value="+377" data-icon="flag-icon-mc">(+377) Monaco</option>
+                <option value="+976" data-icon="flag-icon-mn">(+976) Mongólia</option>
+                <option value="+382" data-icon="flag-icon-me">(+382) Montenegro</option>
+                <option value="+212" data-icon="flag-icon-ma">(+212) Marrocos</option>
+                <option value="+258" data-icon="flag-icon-mz">(+258) Moçambique</option>
+                <option value="+95" data-icon="flag-icon-mm">(+95) Myanmar</option>
+                <option value="+264" data-icon="flag-icon-na">(+264) Namíbia</option>
+                <option value="+674" data-icon="flag-icon-nr">(+674) Nauru</option>
+                <option value="+977" data-icon="flag-icon-np">(+977) Nepal</option>
+                <option value="+31" data-icon="flag-icon-nl">(+31) Holanda</option>
+                <option value="+64" data-icon="flag-icon-nz">(+64) Nova Zelândia</option>
+                <option value="+505" data-icon="flag-icon-ni">(+505) Nicarágua</option>
+                <option value="+227" data-icon="flag-icon-ne">(+227) Níger</option>
+                <option value="+234" data-icon="flag-icon-ng">(+234) Nigéria</option>
+                <option value="+47" data-icon="flag-icon-no">(+47) Noruega</option>
+                <option value="+968" data-icon="flag-icon-om">(+968) Omã</option>
+                <option value="+92" data-icon="flag-icon-pk">(+92) Paquistão</option>
+                <option value="+680" data-icon="flag-icon-pw">(+680) Palau</option>
+                <option value="+507" data-icon="flag-icon-pa">(+507) Panamá</option>
+                <option value="+675" data-icon="flag-icon-pg">(+675) Papua Nova Guiné</option>
+                <option value="+595" data-icon="flag-icon-py">(+595) Paraguai</option>
+                <option value="+51" data-icon="flag-icon-pe">(+51) Peru</option>
+                <option value="+63" data-icon="flag-icon-ph">(+63) Filipinas</option>
+                <option value="+48" data-icon="flag-icon-pl">(+48) Polônia</option>
+                <option value="+351" data-icon="flag-icon-pt">(+351) Portugal</option>
+                <option value="+974" data-icon="flag-icon-qa">(+974) Catar</option>
+                <option value="+40" data-icon="flag-icon-ro">(+40) Romênia</option>
+                <option value="+7" data-icon="flag-icon-ru">(+7) Rússia</option>
+                <option value="+250" data-icon="flag-icon-rw">(+250) Ruanda</option>
+                <option value="+1" data-icon="flag-icon-kn">(+1) São Cristóvão e Nevis</option>
+                <option value="+1" data-icon="flag-icon-lc">(+1) Santa Lúcia</option>
+                <option value="+1" data-icon="flag-icon-vc">(+1) São Vicente e Granadinas</option>
+                <option value="+685" data-icon="flag-icon-ws">(+685) Samoa</option>
+                <option value="+378" data-icon="flag-icon-sm">(+378) San Marino</option>
+                <option value="+239" data-icon="flag-icon-st">(+239) São Tomé e Príncipe</option>
+                <option value="+966" data-icon="flag-icon-sa">(+966) Arábia Saudita</option>
+                <option value="+221" data-icon="flag-icon-sn">(+221) Senegal</option>
+                <option value="+381" data-icon="flag-icon-rs">(+381) Sérvia</option>
+                <option value="+248" data-icon="flag-icon-sc">(+248) Seychelles</option>
+                <option value="+232" data-icon="flag-icon-sl">(+232) Serra Leoa</option>
+                <option value="+65" data-icon="flag-icon-sg">(+65) Cingapura</option>
+                <option value="+421" data-icon="flag-icon-sk">(+421) Eslováquia</option>
+                <option value="+386" data-icon="flag-icon-si">(+386) Eslovênia</option>
+                <option value="+677" data-icon="flag-icon-sb">(+677) Ilhas Salomão</option>
+                <option value="+252" data-icon="flag-icon-so">(+252) Somália</option>
+                <option value="+27" data-icon="flag-icon-za">(+27) África do Sul</option>
+                <option value="+82" data-icon="flag-icon-kr">(+82) Coreia do Sul</option>
+                <option value="+211" data-icon="flag-icon-ss">(+211) Sudão do Sul</option>
+                <option value="+34" data-icon="flag-icon-es">(+34) Espanha</option>
+                <option value="+94" data-icon="flag-icon-lk">(+94) Sri Lanka</option>
+                <option value="+249" data-icon="flag-icon-sd">(+249) Sudão</option>
+                <option value="+597" data-icon="flag-icon-sr">(+597) Suriname</option>
+                <option value="+268" data-icon="flag-icon-sz">(+268) Suazilândia</option>
+                <option value="+46" data-icon="flag-icon-se">(+46) Suécia</option>
+                <option value="+41" data-icon="flag-icon-ch">(+41) Suíça</option>
+                <option value="+963" data-icon="flag-icon-sy">(+963) Síria</option>
+                <option value="+886" data-icon="flag-icon-tw">(+886) Taiwan</option>
+                <option value="+992" data-icon="flag-icon-tj">(+992) Tajiquistão</option>
+                <option value="+255" data-icon="flag-icon-tz">(+255) Tanzânia</option>
+                <option value="+66" data-icon="flag-icon-th">(+66) Tailândia</option>
+                <option value="+228" data-icon="flag-icon-tg">(+228) Togo</option>
+                <option value="+676" data-icon="flag-icon-to">(+676) Tonga</option>
+                <option value="+1" data-icon="flag-icon-tt">(+1) Trinidad e Tobago</option>
+                <option value="+216" data-icon="flag-icon-tn">(+216) Tunísia</option>
+                <option value="+90" data-icon="flag-icon-tr">(+90) Turquia</option>
+                <option value="+993" data-icon="flag-icon-tm">(+993) Turcomenistão</option>
+                <option value="+688" data-icon="flag-icon-tv">(+688) Tuvalu</option>
+                <option value="+256" data-icon="flag-icon-ug">(+256) Uganda</option>
+                <option value="+380" data-icon="flag-icon-ua">(+380) Ucrânia</option>
+                <option value="+971" data-icon="flag-icon-ae">(+971) Emirados Árabes Unidos</option>
+                <option value="+44" data-icon="flag-icon-gb">(+44) Reino Unido</option>
+                <option value="+1" data-icon="flag-icon-us">(+1) Estados Unidos</option>
+                <option value="+598" data-icon="flag-icon-uy">(+598) Uruguai</option>
+                <option value="+998" data-icon="flag-icon-uz">(+998) Uzbequistão</option>
+                <option value="+678" data-icon="flag-icon-vu">(+678) Vanuatu</option>
+                <option value="+39" data-icon="flag-icon-va">(+39) Vaticano</option>
+                <option value="+58" data-icon="flag-icon-ve">(+58) Venezuela</option>
+                <option value="+84" data-icon="flag-icon-vn">(+84) Vietnã</option>
+                <option value="+967" data-icon="flag-icon-ye">(+967) Iêmen</option>
+                <option value="+260" data-icon="flag-icon-zm">(+260) Zâmbia</option>
+                <option value="+263" data-icon="flag-icon-zw">(+263) Zimbábue</option>
+              </select>
+            </div>
+            <div class="form-group-cadastro col-md-4 mb-5">
+              <label for="telefone1" class="col-md-11 col-form-label mb-3">Telefone</label>
+              <input type="tel" class="form-control telefone" id="telefone1" />
+            </div>
+          </div>
+          <div class="d-flex justify-content-between">
+            <div class="text-start">
+              <a href="file:///C:/Users/User/Desktop/portal-2iot/index-acesso/login.html" class="btn btn-danger mb-3" type="button" onclick="retornar()" title="Sair">
+                <svg xmlns="http://www.w3.org/2000/svg" width="26" height="30" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0z"/>
+                  <path fill-rule="evenodd" d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708z"/>
+                </svg>
+              </a>
+            </div>
+            <div class="text-end">
+              <button class="btn btn-secondary" id="next-1" type="button" title="Próximo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+      <!-- Formulário de Dados da Empresa -->
+      <fieldset style="display: none;">
+        <form id="form-1" class="form-cadastro">
+          <h2 class="mb-3">Dados da Empresa</h2>
+          <div class="form-row-cadastro align-items-center">
+            <div class="form-group-cadastro col-md-5">
+              <label for="nome-empresa" class="col-md-11 col-form-label">Nome da Empresa</label>
+              <input type="text" class="form-control" id="nome-empresa" required/>
+            </div>
+            <div class="form-group-cadastro col-md-6">
+              <label for="razao-social" class="col-md-11 col-form-label">Razão Social</label>
+              <input type="text" class="form-control" id="razao-social" required/>
+            </div>
+          </div>
+          <div class="form-group-cadastro col-md-5 mb-5">
+            <label for="cnpj-cpf" class="col-md-11 col-form-label">CNPJ/CPF *</label>
+            <input type="text" class="form-control campo-obrigatorio" id="cnpj-cpf" required/>
+            <div class="invalid-feedback">Este campo é obrigatório.</div>
+          </div>
+          <div class="d-flex justify-content-between">
+            <div class="text-start">
+              <button class="btn btn-secondary mb-3" type="button" id="prev-2" title="Voltar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                </svg>
+              </button>
+            </div>
+            <div class="text-end">
+              <button class="btn btn-secondary" type="button" id="next-2" title="Próximo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+      <!-- Formulário de Endereço -->
+      <fieldset style="display: none;">
+        <form id="form-1" class="form-cadastro">
+          <h2 class="mb-3">Endereço</h2>
+          <div class="form-group-cadastro col-md-3 mb-3">
+            <label for="cep" class="col-md-11 col-form-label">CEP</label>
+            <input type="text" class="form-control campo-obrigatorio" id="cep" onblur="preencherEndereco(this.value)" required/>
+            <div class="invalid-feedback">Este campo é obrigatório.</div>
+          </div>
+          <div class="form-group-cadastro col-md-8 mb-3">
+            <label for="endereco" class="col-md-11 col-form-label">Endereço</label>
+            <input type="text" class="form-control" id="endereco" required />
+          </div>
+          <div class="form-row-cadastro">
+            <div class="form-group-cadastro col-md-6 mb-3">
+              <label for="bairro" class="col-md-11 col-form-label">Bairro</label>
+              <input type="text" class="form-control" id="bairro" required />
+            </div>
+            <div class="form-group-cadastro col-md-2 mb-3">
+              <label for="numero" class="col-md-11 col-form-label">Número</label>
+              <div class="input-group">
+                <input type="text" class="form-control" id="numero" required />
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <input type="checkbox" id="chkSN" />
+                    <label for="chkSN" class="form-check-label">S/N</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form-row-cadastro">
+            <div class="form-group-cadastro col-md-4 mb-3">
+              <label for="cidade" class="col-md-11 col-form-label">Cidade</label>
+              <input type="text" class="form-control" id="cidade" required />
+            </div>
+            <div class="form-group-cadastro col-md-4 mb-3">
+              <label for="estado" class="col-md-11 col-form-label">Estado</label>
+              <select class="form-control campo-obrigatorio" id="estado" aria-placeholder="UF" required>
+                <div class="invalid-feedback">Este campo é obrigatório.</div>
+                <option value=""></option>
+                <option value="acre">Acre</option>
+                <option value="alagoas">Alagoas</option>
+                <option value="amapa">Amapá</option>
+                <option value="amazonas">Amazonas</option>
+                <option value="bahia">Bahia</option>
+                <option value="ceara">Ceará</option>
+                <option value="distrito-federal">Distrito Federal</option>
+                <option value="espirito-santo">Espírito Santo</option>
+                <option value="goias">Goiás</option>
+                <option value="maranhao">Maranhão</option>
+                <option value="mato-grosso">Mato Grosso</option>
+                <option value="mato-grosso-do-sul">Mato Grosso do Sul</option>
+                <option value="minas-gerais">Minas Gerais</option>
+                <option value="para">Pará</option>
+                <option value="paraiba">Paraíba</option>
+                <option value="parana">Paraná</option>
+                <option value="pernambuco">Pernambuco</option>
+                <option value="piaui">Piauí</option>
+                <option value="rio-de-janeiro">Rio de Janeiro</option>
+                <option value="rio-grande-do-norte">Rio Grande do Norte</option>
+                <option value="rio-grande-do-sul">Rio Grande do Sul</option>
+                <option value="rondonia">Rondônia</option>
+                <option value="roraima">Roraima</option>
+                <option value="santa-catarina">Santa Catarina</option>
+                <option value="sao-paulo">São Paulo</option>
+                <option value="sergipe">Sergipe</option>
+                <option value="tocantins">Tocantins</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group-cadastro col-md-4 mb-5">
+            <label for="pais" class="col-md-11 col-form-label">País</label>
+            <select class="form-control campo-obrigatorio" id="pais" required>
+              <div class="invalid-feedback">Este campo é obrigatório.</div>
+              <option value="">País</option>
+              <option value="afeganistao">Afeganistão</option>
+              <option value="africa-do-sul">África do Sul</option>
+              <option value="albania">Albânia</option>
+              <option value="alemanha">Alemanha</option>
+              <option value="andorra">Andorra</option>
+              <option value="angola">Angola</option>
+              <option value="anguila">Anguila</option>
+              <option value="antartida">Antártida</option>
+              <option value="antigua-e-barbuda">Antígua e Barbuda</option>
+              <option value="arabia-saudita">Arábia Saudita</option>
+              <option value="argelia">Argélia</option>
+              <option value="argentina">Argentina</option>
+              <option value="armenia">Armênia</option>
+              <option value="aruba">Aruba</option>
+              <option value="australia">Austrália</option>
+              <option value="austria">Áustria</option>
+              <option value="azerbaijao">Azerbaijão</option>
+              <option value="bahamas">Bahamas</option>
+              <option value="bangladesh">Bangladesh</option>
+              <option value="barbados">Barbados</option>
+              <option value="barein">Barein</option>
+              <option value="belgica">Bélgica</option>
+              <option value="belize">Belize</option>
+              <option value="benin">Benin</option>
+              <option value="bermudas">Bermudas</option>
+              <option value="bielorussia">Bielorrússia</option>
+              <option value="bolivia">Bolívia</option>
+              <option value="bosnia-e-herzegovina">Bósnia e Herzegovina</option>
+              <option value="botswana">Botswana</option>
+              <option value="brasil">Brasil</option>
+              <option value="brunei">Brunei</option>
+              <option value="bulgaria">Bulgária</option>
+              <option value="burkina-faso">Burkina Faso</option>
+              <option value="burundi">Burundi</option>
+              <option value="butao">Butão</option>
+              <option value="cabo-verde">Cabo Verde</option>
+              <option value="camaroes">Camarões</option>
+              <option value="camboja">Camboja</option>
+              <option value="canada">Canadá</option>
+              <option value="catar">Catar</option>
+              <option value="cazaquistao">Cazaquistão</option>
+              <option value="chade">Chade</option>
+              <option value="chile">Chile</option>
+              <option value="china">China</option>
+              <option value="chipre">Chipre</option>
+              <option value="colombia">Colômbia</option>
+              <option value="comores">Comores</option>
+              <option value="coreia-do-norte">Coreia do Norte</option>
+              <option value="coreia-do-sul">Coreia do Sul</option>
+              <option value="costa-do-marfim">Costa do Marfim</option>
+              <option value="costa-rica">Costa Rica</option>
+              <option value="croacia">Croácia</option>
+              <option value="cuba">Cuba</option>
+              <option value="curaçao">Curaçao</option>
+              <option value="dinamarca">Dinamarca</option>
+              <option value="djibouti">Djibouti</option>
+              <option value="dominica">Dominica</option>
+              <option value="egito">Egito</option>
+              <option value="emirados-arabes-unidos">Emirados Árabes Unidos</option>
+              <option value="equador">Equador</option>
+              <option value="eritreia">Eritreia</option>
+              <option value="eslovaquia">Eslováquia</option>
+              <option value="eslovenia">Eslovênia</option>
+              <option value="espanha">Espanha</option>
+              <option value="estados-federados-da-micronesia">Estados Federados da Micronésia</option>
+              <option value="estados-unidos">Estados Unidos</option>
+              <option value="estonia">Estônia</option>
+              <option value="etiopia">Etiópia</option>
+              <option value="fiji">Fiji</option>
+              <option value="filipinas">Filipinas</option>
+              <option value="finlandia">Finlândia</option>
+              <option value="franca">França</option>
+              <option value="gabao">Gabão</option>
+              <option value="gambia">Gâmbia</option>
+              <option value="gana">Gana</option>
+              <option value="georgia">Geórgia</option>
+              <option value="gibraltar">Gibraltar</option>
+              <option value="granada">Granada</option>
+              <option value="grecia">Grécia</option>
+              <option value="groelandia">Groelândia</option>
+              <option value="guadalupe">Guadalupe</option>
+              <option value="guam">Guam</option>
+              <option value="guatemala">Guatemala</option>
+              <option value="guernsey">Guernsey</option>
+              <option value="guiana">Guiana</option>
+              <option value="guiana-francesa">Guiana Francesa</option>
+              <option value="guine">Guiné</option>
+              <option value="guine-bissau">Guiné-Bissau</option>
+              <option value="haiti">Haiti</option>
+              <option value="holanda">Holanda</option>
+              <option value="honduras">Honduras</option>
+              <option value="hong-kong">Hong Kong</option>
+              <option value="hungria">Hungria</option>
+              <option value="iemen">Iêmen</option>
+              <option value="india">Índia</option>
+              <option value="indonesia">Indonésia</option>
+              <option value="iraque">Iraque</option>
+              <option value="irlanda">Irlanda</option>
+              <option value="islandia">Islândia</option>
+              <option value="israel">Israel</option>
+              <option value="italia">Itália</option>
+              <option value="jamaica">Jamaica</option>
+              <option value="japao">Japão</option>
+              <option value="jersey">Jersey</option>
+              <option value="jordania">Jordânia</option>
+              <option value="kuaite">Kuait</option>
+              <option value="laos">Laos</option>
+              <option value="lesoto">Lesoto</option>
+              <option value="letonia">Letônia</option>
+              <option value="libano">Líbano</option>
+              <option value="liberia">Libéria</option>
+              <option value="libia">Líbia</option>
+              <option value="liechtenstein">Liechtenstein</option>
+              <option value="lituania">Lituânia</option>
+              <option value="luxemburgo">Luxemburgo</option>
+              <option value="macau">Macau</option>
+              <option value="macedonia">Macedônia</option>
+              <option value="madagascar">Madagascar</option>
+              <option value="malasia">Malásia</option>
+              <option value="malawi">Malawi</option>
+              <option value="maldivas">Maldivas</option>
+              <option value="mali">Mali</option>
+              <option value="malta">Malta</option>
+              <option value="marrocos">Marrocos</option>
+              <option value="martinica">Martinica</option>
+              <option value="mauricio">Maurício</option>
+              <option value="mauritania">Mauritânia</option>
+              <option value="mayotte">Mayotte</option>
+              <option value="mexico">México</option>
+              <option value="mianmar">Mianmar</option>
+              <option value="mocambique">Moçambique</option>
+              <option value="moldavia">Moldávia</option>
+              <option value="monaco">Mônaco</option>
+              <option value="mongolia">Mongólia</option>
+              <option value="montenegro">Montenegro</option>
+              <option value="montserrat">Montserrat</option>
+              <option value="namibia">Namíbia</option>
+              <option value="nauru">Nauru</option>
+              <option value="nepal">Nepal</option>
+              <option value="nicaragua">Nicarágua</option>
+              <option value="niger">Níger</option>
+              <option value="nigeria">Nigéria</option>
+              <option value="niue">Niue</option>
+              <option value="noruega">Noruega</option>
+              <option value="nova-caledonia">Nova Caledônia</option>
+              <option value="nova-zelandia">Nova Zelândia</option>
+              <option value="omã">Omã</option>
+              <option value="palau">Palau</option>
+              <option value="palestina">Palestina</option>
+              <option value="panama">Panamá</option>
+              <option value="papua-nova-guine">Papua Nova Guiné</option>
+              <option value="paquistao">Paquistão</option>
+              <option value="paraguai">Paraguai</option>
+              <option value="peru">Peru</option>
+              <option value="polinesia-francesa">Polinésia Francesa</option>
+              <option value="polonia">Polônia</option>
+              <option value="porto-rico">Porto Rico</option>
+              <option value="portugal">Portugal</option>
+              <option value="quenia">Quênia</option>
+              <option value="quirguistao">Quirguistão</option>
+              <option value="reino-unido">Reino Unido</option>
+              <option value="republica-central-africana">República Centro-Africana</option>
+              <option value="republica-checa">República Checa</option>
+              <option value="republica-democratica-do-congo">República Democrática do Congo</option>
+              <option value="republica-do-congo">República do Congo</option>
+              <option value="republica-dominicana">República Dominicana</option>
+              <option value="reuniao">Reunião</option>
+              <option value="romenia">Romênia</option>
+              <option value="ruanda">Ruanda</option>
+              <option value="russia">Rússia</option>
+              <option value="saara-ocidental">Saara Ocidental</option>
+              <option value="saint-pierre-e-miquelon">Saint-Pierre e Miquelon</option>
+              <option value="samoa">Samoa</option>
+              <option value="samoa-americana">Samoa Americana</option>
+              <option value="san-marino">San Marino</option>
+              <option value="santa-helena">Santa Helena</option>
+              <option value="santa-lucia">Santa Lúcia</option>
+              <option value="sao-bartolomeu">São Bartolomeu</option>
+              <option value="sao-cristovao-e-nevis">São Cristóvão e Nevis</option>
+              <option value="sao-martinho">São Martinho</option>
+              <option value="sao-martinho-paises-baixos">São Martinho (Países Baixos)</option>
+              <option value="sao-tome-e-principe">São Tomé e Príncipe</option>
+              <option value="sao-vicente-e-granadinas">São Vicente e Granadinas</option>
+              <option value="seicheles">Seicheles</option>
+              <option value="senegal">Senegal</option>
+              <option value="serra-leoa">Serra Leoa</option>
+              <option value="servia">Sérvia</option>
+              <option value="singapura">Singapura</option>
+              <option value="sint-maarten">Sint Maarten</option>
+              <option value="siria">Síria</option>
+              <option value="somalia">Somália</option>
+              <option value="sri-lanka">Sri Lanka</option>
+              <option value="suazilandia">Suazilândia</option>
+              <option value="sudao">Sudão</option>
+              <option value="sudao-do-sul">Sudão do Sul</option>
+              <option value="suecia">Suécia</option>
+              <option value="suica">Suíça</option>
+              <option value="suriname">Suriname</option>
+              <option value="tadjiquistao">Tadjiquistão</option>
+              <option value="tailandia">Tailândia</option>
+              <option value="taiwan">Taiwan</option>
+              <option value="tanzania">Tanzânia</option>
+              <option value="territorio-britanico-do-oceano-indico">Território Britânico do Oceano Índico</option>
+              <option value="territorios-franceses-do-sul">Territórios Franceses do Sul</option>
+              <option value="territorios-palestinos">Territórios Palestinos</option>
+              <option value="timor-leste">Timor-Leste</option>
+              <option value="togo">Togo</option>
+              <option value="tokelau">Tokelau</option>
+              <option value="tonga">Tonga</option>
+              <option value="trinidad-e-tobago">Trinidad e Tobago</option>
+              <option value="tunisia">Tunísia</option>
+              <option value="turcomenistao">Turcomenistão</option>
+              <option value="turquia">Turquia</option>
+              <option value="tuvalu">Tuvalu</option>
+              <option value="ucrania">Ucrânia</option>
+              <option value="uganda">Uganda</option>
+              <option value="uruguai">Uruguai</option>
+              <option value="uzbequistao">Uzbequistão</option>
+              <option value="vanuatu">Vanuatu</option>
+              <option value="vaticano">Vaticano</option>
+              <option value="venezuela">Venezuela</option>
+              <option value="vietna">Vietnã</option>
+              <option value="wallis-e-futuna">Wallis e Futuna</option>
+              <option value="zambia">Zâmbia</option>
+              <option value="zimbabue">Zimbábue</option>
+            </select>
+          </div>
+          <div class="d-flex justify-content-between">
+            <div class="text-start">
+              <button class="btn btn-secondary mb-3" type="button" id="prev-3" title="Voltar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"/>
+                </svg>
+              </button>
+            </div>
+            <div class="text-end">
+              <button type="button" class="btn btn-danger" id="save" title="Salvar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" fill="currentColor" class="bi bi-check-lg" viewBox="0 0 16 16">
+                  <path d="M12.736 3.97a.733.733 0 0 1 1.047 0c.286.289.29.756.01 1.05L7.88 12.01a.733.733 0 0 1-1.065.02L3.217 8.384a.757.757 0 0 1 0-1.06.733.733 0 0 1 1.047 0l3.052 3.093 5.4-6.425z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="successModalLabel">Sucesso</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="modal-body">
+            Cadastro concluído com sucesso!
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
